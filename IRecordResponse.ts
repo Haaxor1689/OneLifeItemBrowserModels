@@ -1,4 +1,5 @@
 import { IObjectRecordContainer } from "./ObjectRecord";
+import IProgressInfo from './IProgressInfo';
 
 type IRecordsResponse = IRecordResponse | IUpdateResponse;
 export default IRecordsResponse;
@@ -10,6 +11,5 @@ export interface IRecordResponse {
 
 export interface IUpdateResponse {
     outdated: true;
-    progress: number;
-    progressMessage: string;
+    progress: IProgressInfo;
 }
