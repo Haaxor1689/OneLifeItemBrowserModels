@@ -1,5 +1,8 @@
 import { IObjectRecordContainer } from "./ObjectRecord";
 
+type IRecordsResponse = IRecordResponse | IUpdateResponse;
+export default IRecordsResponse;
+
 export interface IRecordResponse {
     outdated: false;
     records: IObjectRecordContainer;
