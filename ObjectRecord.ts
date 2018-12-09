@@ -18,6 +18,8 @@ export default class ObjectRecord {
     // how big of a slot is needed to contain it
     containSize: number = 1;
 
+    displaySize = (): string => this.containable ? String(this.containSize) : "\u221e";
+
     // by default, when placed in a vertical container slot,
     // objects rotate 90 deg clockwise
     // this is an offset from that angle (default 0)
@@ -116,6 +118,8 @@ export default class ObjectRecord {
 
     foodValue: number = 0;
 
+    isEdible = (): boolean => this.foodValue > 0;
+
     // multiplier on walking speed when holding
     speedMult: number = 0;
 
@@ -131,6 +135,8 @@ export default class ObjectRecord {
     // b = bottom
     // p = backpack
     clothing: string = '';
+
+    isClothing = (): boolean => this.clothing !== 'n';
 
     // offset of clothing from it's default location
     // (hats is slightly above head, shoes is centered on feet,
