@@ -6,7 +6,6 @@ export default IRecordsResponse;
 
 export interface IRecordResponse {
     outdated: false;
-    records: IObjectRecordContainer;
 }
 
 export interface IUpdateResponse {
